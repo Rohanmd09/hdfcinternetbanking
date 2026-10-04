@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Statement - HDFC NetBanking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        .statement-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .statement-table th, .statement-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 13px;
+        }
+        .statement-table th {
+            background-color: var(--secondary-navy);
+            color: white;
+        }
+        .statement-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        .debit { color: #dc2626; font-weight: 500; }
+        .credit { color: #16a34a; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <svg width="150" height="28" viewBox="0 0 200 35" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="35" height="35" fill="#ffffff" /><path d="M 0 0 L 15 0 L 15 5 L 5 5 L 5 15 L 0 15 Z" fill="#ed232a" /><path d="M 35 0 L 20 0 L 20 5 L 30 5 L 30 15 L 35 15 Z" fill="#ed232a" /><path d="M 0 35 L 15 35 L 15 30 L 5 30 L 5 20 L 0 20 Z" fill="#ed232a" /><path d="M 35 35 L 20 35 L 20 30 L 30 30 L 30 20 L 35 20 Z" fill="#ed232a" /><rect x="10" y="10" width="15" height="15" fill="#004b8f" /><rect x="35" y="0" width="165" height="35" fill="#004b8f" /><text x="50" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" letter-spacing="1">HDFC BANK</text></svg>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="index.html">Home</a>
+            <div class="avatar">SB</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="main-content" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--theme-banner); padding-bottom: 15px; margin-bottom: 20px;">
+                <h2>Account Statement</h2>
+                <button class="btn-primary" id="downloadPdfBtn"><i class="fas fa-file-pdf"></i> Download PDF</button>
+            </div>
+            
+            <div style="background: var(--bg-light); padding: 15px; border-radius: 8px; margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <p style="font-size: 12px; color: #666;">Account Name</p>
+                    <p style="font-weight: 600;" id="stName">-</p>
+                </div>
+                <div>
+                    <p style="font-size: 12px; color: #666;">Account Number</p>
+                    <p style="font-weight: 600;" id="stAccNo">-</p>
+                </div>
+                <div>
+                    <p style="font-size: 12px; color: #666;">Branch</p>
+                    <p style="font-weight: 600;" id="stBranch">-</p>
+                </div>
+                <div>
+                    <p style="font-size: 12px; color: #666;">Current Balance</p>
+                    <p style="font-weight: 600; color: var(--accent-purple);" id="stBal">-</p>
+                </div>
+            </div>
+
+            <table class="statement-table" id="statementTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Narration</th>
+                        <th>Chq./Ref.No.</th>
+                        <th>Value Dt</th>
+                        <th>Withdrawal (Dr)</th>
+                        <th>Deposit (Cr)</th>
+                        <th>Closing Balance</th>
+                    </tr>
+                </thead>
+                <tbody id="statementBody">
+                    <!-- JS will populate this -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/statement.js"></script>
+</body>
+</html>

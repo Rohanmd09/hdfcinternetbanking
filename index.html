@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDFC NetBanking Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <svg width="150" height="28" viewBox="0 0 200 35" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="35" height="35" fill="#ffffff" /><path d="M 0 0 L 15 0 L 15 5 L 5 5 L 5 15 L 0 15 Z" fill="#ed232a" /><path d="M 35 0 L 20 0 L 20 5 L 30 5 L 30 15 L 35 15 Z" fill="#ed232a" /><path d="M 0 35 L 15 35 L 15 30 L 5 30 L 5 20 L 0 20 Z" fill="#ed232a" /><path d="M 35 35 L 20 35 L 20 30 L 30 30 L 30 20 L 35 20 Z" fill="#ed232a" /><rect x="10" y="10" width="15" height="15" fill="#004b8f" /><rect x="35" y="0" width="165" height="35" fill="#004b8f" /><text x="50" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" letter-spacing="1">HDFC BANK</text></svg>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Book Deposit / Download Form 16 / etc.">
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="services.html"><i class="far fa-question-circle"></i> Services & Support</a>
+            <button class="icon-btn"><i class="far fa-bell"></i></button>
+            <button class="icon-btn"><i class="fas fa-power-off"></i></button>
+            <button class="icon-btn"><i class="fas fa-bars"></i></button>
+            <div class="avatar">SB</div>
+        </div>
+    </nav>
+
+    <!-- Subnav -->
+    <div class="subnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="#">Accounts</a>
+        <a href="send-rtgs.html">Send Money</a>
+        <a href="#">Cards <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+        <a href="#">FD/RD <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+        <a href="#">Bills & Recharges</a>
+        <a href="#">Loans</a>
+        <a href="#">Invest <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+        <a href="#">Insure</a>
+    </div>
+
+    <div class="container">
+        
+        <!-- Theme Banner -->
+        <div class="theme-banner">
+            <div>
+                <h4>Set a new theme!</h4>
+                <p>Experience your account in a new avatar with a personalised interface crafted just for you.</p>
+            </div>
+            <button class="btn-primary">Apply Theme</button>
+        </div>
+
+        <div class="offers-pill">
+            <i class="fas fa-gift"></i> Special offers for you! <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="clear"></div>
+
+        <div class="dashboard-grid">
+            
+            <div class="main-content">
+                <div class="account-tabs">
+                    <div class="tab-pill active">
+                        <i class="fas fa-wallet" style="color: #60a5fa;"></i>
+                        <span><b>Accounts</b><br><small>Savings, Current etc</small></span>
+                    </div>
+                    <button class="tab-pill-small">Cards</button>
+                    <button class="tab-pill-small">FD/RD</button>
+                    <button class="tab-pill-small">Loans</button>
+                    <button class="tab-pill-small">Invest</button>
+                    <button class="tab-pill-small">Insure</button>
+                </div>
+
+                <div class="balance-toggle-sec">
+                    <span>Show Balance</span>
+                    <label class="switch">
+                        <input type="checkbox" id="balanceToggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="cards-row">
+                    <!-- Account Card -->
+                    <div class="card acc-card" style="background-color: #f3f4f6;">
+                        <i class="fas fa-hand-holding-usd" style="color: #8b5cf6; font-size: 24px; margin-bottom: 10px;"></i>
+                        <p>Savings Accounts</p>
+                        <h3 id="displayBalance">XXXXXXXX</h3>
+                        <button class="btn-full" onclick="window.location.href='statement.html'">Get Statement</button>
+                        <i class="fas fa-arrow-right arrow-link"></i>
+                    </div>
+
+                    <!-- Promo Card 1 -->
+                    <div class="card card-purple">
+                        <i class="fas fa-percent" style="font-size: 24px;"></i>
+                        <p>Enjoy tax benefits and assured returns</p>
+                        <button class="btn-white">Open PPF Account</button>
+                        <i class="fas fa-arrow-right arrow-link"></i>
+                    </div>
+
+                    <!-- Promo Card 2 -->
+                    <div class="card card-purple">
+                        <i class="fas fa-chart-line" style="font-size: 24px;"></i>
+                        <p>Open Demat & Trading Acc in few clicks</p>
+                        <button class="btn-white">Open Demat Account</button>
+                        <i class="fas fa-arrow-right arrow-link"></i>
+                    </div>
+                </div>
+
+                <style>
+                .send-money-card {
+                    background: white;
+                    border-radius: 12px;
+                    padding: 20px 25px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+                    margin-top: 30px;
+                }
+                .sm-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 20px;
+                }
+                .sm-header h3 {
+                    font-size: 18px;
+                    color: #1e293b;
+                    margin: 0;
+                }
+                .add-payee {
+                    color: #3b82f6;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: 600;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                .payee-icon {
+                    background: #f97316;
+                    color: white;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                }
+                .sm-form-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+                    gap: 20px;
+                }
+                .sm-group label {
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: #475569;
+                    margin-bottom: 8px;
+                }
+                .sm-group select, .sm-group input {
+                    width: 100%;
+                    padding: 10px 15px;
+                    border: 1px solid #cbd5e1;
+                    border-radius: 6px;
+                    font-size: 14px;
+                    color: #64748b;
+                    outline: none;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    background: url('data:image/svg+xml;utf8,<svg fill="%2394a3b8" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+                }
+                .sm-group select {
+                    background-color: white;
+                }
+                .sm-group input {
+                    background: white;
+                }
+                .amount-proceed {
+                    display: flex;
+                    gap: 15px;
+                }
+                .amount-proceed input {
+                    flex: 1;
+                }
+                .btn-proceed {
+                    background: white;
+                    color: #3b82f6;
+                    border: 1px solid #3b82f6;
+                    border-radius: 6px;
+                    padding: 0 25px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: 0.2s;
+                }
+                .btn-proceed:hover {
+                    background: #eff6ff;
+                }
+                </style>
+                
+                <div class="bottom-section send-money-card">
+                    <div class="sm-header">
+                        <h3>Send Money</h3>
+                        <a href="#" class="add-payee">
+                            <span class="payee-icon"><i class="fas fa-user"></i></span>
+                            Add Payee <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <div class="sm-form-grid">
+                        <div class="sm-group">
+                            <label>From</label>
+                            <select class="form-control" id="quickFromAcc">
+                                <option>Select Account</option>
+                            </select>
+                        </div>
+                        <div class="sm-group">
+                            <label>To</label>
+                            <input type="text" class="form-control" id="quickToAcc" placeholder="Payee Acc / UPI">
+                        </div>
+                        <div class="sm-group">
+                            <label>Transfer Type</label>
+                            <select class="form-control" id="quickTransferType">
+                                <option value="IMPS">IMPS (Instant)</option>
+                                <option value="NEFT">NEFT</option>
+                                <option value="RTGS">RTGS</option>
+                            </select>
+                        </div>
+                        <div class="sm-group">
+                            <label>Amount</label>
+                            <div class="amount-proceed">
+                                <input type="number" class="form-control" id="quickAmount" placeholder="₹0.00">
+                                <button class="btn-proceed" id="quickProceedBtn">Proceed</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-panel">
+                    <h3>My Favourite Links</h3>
+                    <ul class="fav-links">
+                        <li><a href="statement.html"><i class="far fa-file-alt icon-left"></i> Account Statement <i class="fas fa-chevron-right icon-right"></i></a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt icon-left"></i> Open FD <i class="fas fa-chevron-right icon-right"></i></a></li>
+                        <li><a href="#"><i class="far fa-file-pdf icon-left"></i> Download FD Summary <i class="fas fa-chevron-right icon-right"></i></a></li>
+                        <li><a href="#"><i class="fas fa-exchange-alt icon-left"></i> Sweep-in / OD against FD <i class="fas fa-chevron-right icon-right"></i></a></li>
+                        <li><a href="#"><i class="fas fa-certificate icon-left"></i> CASA Interest Certificate <i class="fas fa-chevron-right icon-right"></i></a></li>
+                    </ul>
+                    <a href="#" class="add-links">Add & Edit Links</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Success Modal for Quick Transfer -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h3>Transfer Successful</h3>
+            <p style="color: #666; margin: 10px 0; font-size: 14px;">Your quick transaction was successful.</p>
+            <div style="background: #f9fafb; padding: 15px; border-radius: 8px; margin: 15px 0; text-align: left; font-size: 14px;">
+                <p><b>Ref No:</b> <span id="modalRefNo"></span></p>
+                <p><b>Amount:</b> <span id="modalAmount"></span></p>
+            </div>
+            <button class="btn-primary" id="btnDownloadSlip" style="width: 100%;"><i class="fas fa-file-archive"></i> Download Slip (ZIP)</button>
+            <button class="btn-secondary" onclick="document.getElementById('successModal').style.display='none'" style="width: 100%;">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/slip.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

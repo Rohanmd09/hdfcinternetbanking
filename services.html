@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Support - HDFC NetBanking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <svg width="150" height="28" viewBox="0 0 200 35" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="35" height="35" fill="#ffffff" /><path d="M 0 0 L 15 0 L 15 5 L 5 5 L 5 15 L 0 15 Z" fill="#ed232a" /><path d="M 35 0 L 20 0 L 20 5 L 30 5 L 30 15 L 35 15 Z" fill="#ed232a" /><path d="M 0 35 L 15 35 L 15 30 L 5 30 L 5 20 L 0 20 Z" fill="#ed232a" /><path d="M 35 35 L 20 35 L 20 30 L 30 30 L 30 20 L 35 20 Z" fill="#ed232a" /><rect x="10" y="10" width="15" height="15" fill="#004b8f" /><rect x="35" y="0" width="165" height="35" fill="#004b8f" /><text x="50" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" letter-spacing="1">HDFC BANK</text></svg>
+                <span style="color: #fff; font-weight: 300; margin-left: 10px; font-size: 14px;">CLASSIC</span>
+            </div>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Book Deposit / Download Form 16 / etc.">
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="services.html"><i class="far fa-question-circle"></i> Services & Support</a>
+            <button class="icon-btn"><i class="far fa-bell"></i><span style="background: red; border-radius: 50%; width: 15px; height: 15px; display: inline-block; font-size: 10px; line-height: 15px; text-align: center; position: absolute; margin-left: -8px; margin-top: -5px;">1</span></button>
+            <button class="icon-btn"><i class="fas fa-power-off"></i></button>
+            <button class="icon-btn"><i class="fas fa-bars"></i></button>
+            <div class="avatar">SB</div>
+        </div>
+    </nav>
+
+    <!-- Subnav -->
+    <div class="subnav">
+        <a href="index.html">Home</a>
+        <a href="#">Accounts</a>
+        <a href="send-rtgs.html">Send Money</a>
+        <a href="#">Cards <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+        <a href="#">FD/RD <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+        <a href="#">Bill & Recharges</a>
+        <a href="#">Loans</a>
+        <a href="#">Invest <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+        <a href="#">Insure <i class="fas fa-chevron-down" style="font-size:10px;"></i></a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="page-header" style="padding: 40px; color: white;">
+        <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto;">
+            <h1>Services & Support</h1>
+            <button class="btn-primary" style="background-color: #2563eb;">Track Raised Requests <i class="fas fa-caret-down"></i></button>
+        </div>
+        <div style="max-width: 1400px; margin: 30px auto 0; display: flex; gap: 30px; border-bottom: 1px solid rgba(255,255,255,0.2);">
+            <div style="padding-bottom: 10px; border-bottom: 3px solid white; font-weight: 600;">Services</div>
+            <div style="padding-bottom: 10px; color: #ccc;">Contact Us</div>
+        </div>
+    </div>
+
+    <div class="container" style="background-color: var(--bg-light); border-radius: 20px 20px 0 0; padding-top: 30px; margin-top: -10px;">
+        <div class="dashboard-grid">
+            
+            <div class="main-content" style="background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                    <h2>All Banking Services</h2>
+                    <div class="search-bar" style="border: 1px solid #ddd; width: 300px;">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search e.g.: 'Update Email ID'">
+                    </div>
+                </div>
+
+                <!-- Accordion 1 -->
+                <div class="accordion">
+                    <div class="acc-header" onclick="toggleAcc(this)">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-wallet" style="color: #3b82f6; font-size: 24px;"></i>
+                            <h3 style="margin: 0;">Accounts</h3>
+                        </div>
+                        <i class="fas fa-chevron-up"></i>
+                    </div>
+                    <div class="acc-content" style="display: block;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 15px 0;">
+                            <a href="#" class="service-link">Manage Account Nominee</a>
+                            <a href="#" class="service-link">Manage e-Statement</a>
+                            <a href="#" class="service-link">Download Interest Certificate</a>
+                            <a href="#" class="service-link">Safe Deposit Locker</a>
+                            <a href="#" class="service-link">Sweep-In & OD against FD</a>
+                            <a href="#" class="service-link">View Hold Transactions</a>
+                            <a href="#" class="service-link">Manage Primary Account</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion 2 -->
+                <div class="accordion">
+                    <div class="acc-header" onclick="toggleAcc(this)">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-money-bill-wave" style="color: #6366f1; font-size: 24px;"></i>
+                            <div>
+                                <h3 style="margin: 0; font-size: 16px;">Send Money</h3>
+                                <p style="margin: 5px 0 0; font-size: 13px; color: #888;">Own Account Transfer, Send money to payee, Customise Transfer Limit and more</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #aaa;"></i>
+                    </div>
+                    <div class="acc-content" style="display: none;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 15px 0;">
+                            <a href="send-rtgs.html" class="service-link">RTGS Transfer</a>
+                            <a href="send-neft.html" class="service-link">NEFT Transfer</a>
+                            <a href="send-imps.html" class="service-link">IMPS Transfer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion 3 -->
+                <div class="accordion">
+                    <div class="acc-header" onclick="toggleAcc(this)" style="border-bottom: none;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <i class="fas fa-money-check" style="color: #cbd5e1; font-size: 24px;"></i>
+                            <div>
+                                <h3 style="margin: 0; font-size: 16px; color: #aaa;">Cheque/DD/Cash</h3>
+                                <p style="margin: 5px 0 0; font-size: 13px; color: #eee;">View Cheque Status, Stop Cheque Payment, Request New Cheque book and more</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #eee;"></i>
+                    </div>
+                    <div class="acc-content" style="display: none;">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sidebar">
+                <div class="sidebar-panel">
+                    <h3>Quick Links</h3>
+                    <ul class="fav-links">
+                        <li><a href="#"><i class="fas fa-phone-slash icon-left" style="color: #3b82f6;"></i> Do Not Call <i class="fas fa-chevron-right icon-right" style="color: #3b82f6;"></i></a></li>
+                        <li><a href="#"><i class="far fa-comment-dots icon-left" style="color: #3b82f6;"></i> Message Us <i class="fas fa-chevron-right icon-right" style="color: #3b82f6;"></i></a></li>
+                        <li><a href="#"><i class="fas fa-university icon-left" style="color: #3b82f6;"></i> Branch Locator <i class="fas fa-chevron-right icon-right" style="color: #3b82f6;"></i></a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt icon-left" style="color: #3b82f6;"></i> ATMs near me <i class="fas fa-chevron-right icon-right" style="color: #3b82f6;"></i></a></li>
+                        <li><a href="#"><i class="far fa-list-alt icon-left" style="color: #3b82f6;"></i> Forms Centre <i class="fas fa-chevron-right icon-right" style="color: #3b82f6;"></i></a></li>
+                        <li><a href="#"><i class="fas fa-exclamation-triangle icon-left" style="color: #3b82f6;"></i> Report an issue/bug <i class="fas fa-chevron-right icon-right" style="color: #3b82f6;"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="promo-card" style="margin-top: 20px; background: linear-gradient(135deg, #a855f7, #6366f1, #3b82f6); border-radius: 12px; padding: 25px; color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <div style="background: rgba(255,255,255,0.2); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                    <p style="margin-bottom: 5px; font-size: 14px;">Get instant funds with</p>
+                    <h2 style="font-size: 24px; font-weight: 600;">HDFC Bank</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleAcc(el) {
+            const content = el.nextElementSibling;
+            const icon = el.querySelector('.fa-chevron-down, .fa-chevron-up');
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            } else {
+                content.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            }
+        }
+    </script>
+</body>
+</html>
