@@ -47,13 +47,5 @@ function generateSlipAndZip(transactionDetails) {
     doc.text("This is a computer generated receipt and does not require a signature.", 105, yPos, null, null, "center");
     
     // Generate PDF Blob
-    const pdfOutput = doc.output('blob');
-    
-    // Create ZIP
-    const zip = new JSZip();
-    zip.file(`HDFC_Receipt_${transactionDetails.refNo}.pdf`, pdfOutput);
-    
-    zip.generateAsync({ type: "blob" }).then(function(content) {
-        saveAs(content, `HDFC_Transaction_${transactionDetails.refNo}.zip`);
-    });
+    doc.save(`HDFC_Receipt_${transactionDetails.refNo}.pdf`);
 }
